@@ -125,5 +125,6 @@ $Ad=new DB('ads');
 $Mvim=new DB('mvims');
 $Image=new DB('images');
 $News=new DB('news');
-$Bottom=new DB('bottoms');
 $Admin=new DB('admins');
+$Menu=new DB('menus');
+$Bottom=new DB('bottoms');
