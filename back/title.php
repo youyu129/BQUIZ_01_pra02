@@ -26,7 +26,8 @@
                 </td>
                 <td>
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
-                    <button onclick="addtitle()">更新圖片</button>
+                    <input type="button"
+                        onclick="op('#cover','#cvr','./modal/update_<?=$do;?>.php?id=<?=$row['id'];?>')" value="更新圖片">
                 </td>
             </tr>
             <?php
