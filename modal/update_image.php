@@ -1,4 +1,4 @@
-<h3 class="cent">新增校園映像圖片</h3>
+<h3 class="cent">更換校園映像圖片</h3>
 <hr>
 <form action="api/insert.php" method="post" enctype="multipart/form-data">
     <table>
@@ -13,7 +13,7 @@
     <div>
         <input type="hidden" name="id" value=<?=$_GET['id'];?>>
         <input type="hidden" name="table" value="<?=$_GET['table'];?>">
-        <input type="submit" value="新增">
+        <input type="submit" value="更換">
         <input type="reset" value="重置">
     </div>
 </form>
