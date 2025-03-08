@@ -11,12 +11,10 @@
             <?php
             $rows=$Admin->all();
             foreach ($rows as $row):
+                if($row['acc']!='admin'):
             ?>
             <tr>
                 <td>
-                    <?php
-                    if($row['acc']!='admin'):
-                    ?>
                     <input type="text" name="acc[]" id="acc" value="<?=$row['acc'];?>" style="width:80%;">
                 </td>
                 <td>
@@ -29,9 +27,7 @@
                 </td>
             </tr>
             <?php
-                    endif;
-                    ?>
-            <?php
+            endif;
             endforeach;
             ?>
         </tbody>
