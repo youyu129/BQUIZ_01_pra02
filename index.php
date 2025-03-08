@@ -26,7 +26,9 @@ include_once "api/db.php";
     <iframe style="display:none;" name="back" id="back"></iframe>
     <div id="main">
         <a title="" href="index.php">
-            <div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;"></div>
+            <div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;">
+                <img src="./upload/<?=$Title->find(['sh'=>1])['img'];?>" alt="卓越科技大學校園資訊系統">
+            </div>
             <!--標題-->
         </a>
         <div id="ms">
