@@ -126,3 +126,4 @@ $Mvim=new DB('mvims');
 $Image=new DB('images');
 $News=new DB('news');
 $Bottom=new DB('bottoms');
+$Admin=new DB('admins');
