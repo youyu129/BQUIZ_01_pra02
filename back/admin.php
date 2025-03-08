@@ -14,6 +14,9 @@
             ?>
             <tr>
                 <td>
+                    <?php
+                    if($row['acc']!='admin'):
+                    ?>
                     <input type="text" name="acc[]" id="acc" value="<?=$row['acc'];?>" style="width:80%;">
                 </td>
                 <td>
@@ -25,6 +28,9 @@
                     <input type="hidden" name="table" value="<?=$do;?>">
                 </td>
             </tr>
+            <?php
+                    endif;
+                    ?>
             <?php
             endforeach;
             ?>
