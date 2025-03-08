@@ -40,14 +40,14 @@
     <div class="cent">
         <?php
             if(($now-1)>0){
-                echo "<a href='admin.php?do=news&p=".($now-1)."' style='text-decoration: none;'> < </a>";
+                echo "<a href='admin.php?do=$do&p=".($now-1)."' style='text-decoration: none;'> < </a>";
             }
             for ($i=1; $i <= $pages ; $i++) { 
                 $size=($i==$now)?'24px':'16px';
-                echo "<a href='admin.php?do=news&p=".$i."' style='font-size:$size;text-decoration: none;'> $i </a>";
+                echo "<a href='admin.php?do=$do&p=".$i."' style='font-size:$size;text-decoration: none;'> $i </a>";
             }
             if(($now+1)<=$pages){
-                echo "<a href='admin.php?do=news&p=".($now+1)."' style='text-decoration: none;'> > </a>";
+                echo "<a href='admin.php?do=$do&p=".($now+1)."' style='text-decoration: none;'> > </a>";
             }
             ?>
     </div>
