@@ -122,3 +122,5 @@ function dd($array)
 
 $Title=new DB('titles');
 $Ad=new DB('ads');
+$Mvim=new DB('mvims');
+$Image=new DB('images');
