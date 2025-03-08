@@ -121,3 +121,4 @@ function dd($array)
 }
 
 $Title=new DB('titles');
+$Ad=new DB('ads');

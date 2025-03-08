@@ -25,9 +25,11 @@
                     <input type="checkbox" name="del[]" id="del" value="<?=$row['id'];?>">
                 </td>
                 <td>
+                    <input type="hidden" name="table" value="<?=$_GET['do'];?>">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     <input type="button"
-                        onclick="op('#cover','#cvr','./modal/update_<?=$do;?>.php?id=<?=$row['id'];?>')" value="更新圖片">
+                        onclick="op('#cover','#cvr','./modal/update_<?=$do;?>.php?table=<?=$do;?>&id=<?=$row['id'];?>')"
+                        value="更新圖片">
                 </td>
             </tr>
             <?php
@@ -39,7 +41,8 @@
         <tbody>
             <tr>
                 <td width="200px"><input type="button"
-                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php&#39;)" value="新增網站標題圖片">
+                        onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
+                        value="新增網站標題圖片">
                 </td>
                 <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置">
                 </td>
