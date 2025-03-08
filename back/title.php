@@ -1,5 +1,5 @@
 <p class="t cent botli">網站標題管理</p>
-<form method="post" target="back" action="?do=tii">
+<form method="post" action="./api/edit.php">
     <table width="100%" class="cent">
         <tbody>
             <tr class="yel">
@@ -19,13 +19,14 @@
                     <input type="text" name="text[]" id="text" value="<?=$row['text'];?>">
                 </td>
                 <td>
-                    <input type="radio" name="sh" id="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':"";?>
-                        </td>
+                    <input type="radio" name="sh" id="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':"";?>>
+                </td>
                 <td>
                     <input type="checkbox" name="del[]" id="del" value="<?=$row['id'];?>">
                 </td>
                 <td>
-                    <button>更新圖片</button>
+                    <input type="hidden" name="id[]" value="<?=$row['id'];?>">
+                    <button onclick="addtitle()">更新圖片</button>
                 </td>
             </tr>
             <?php
