@@ -29,16 +29,15 @@ function more() {
 	console.log('more ok');
 	let el = `
 	<tr>
-<td>
-	<input type="text" name="text[]" id="text" style="width:90%">
-</td>
-<td>
-	<input type="text" name="href[]" id="href" style="width:90%">
-</td>
-<td>
-	<input type="checkbox" name="del[]" id="del" value="<?=$row['id'];?>">
-</td>
-</tr>
-`
-	$("#tbody").append(el)
+		<td>
+			<input type="text" name="text2[]" id="text" style="width:90%">
+		</td>
+		<td>
+			<input type="text" name="href2[]" id="href" style="width:90%">
+		</td>
+		<td>
+		</td>
+	</tr>
+	`
+	$("#more").before(el)
 }
