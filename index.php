@@ -25,7 +25,7 @@ include_once "api/db.php";
     </div>
     <iframe style="display:none;" name="back" id="back"></iframe>
     <div id="main">
-        <a title="卓越科技大學校園資訊系統" href="index.php">
+        <a title="<?=$Title->find(['sh'=>1])['text'];?>" href="index.php">
             <div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;">
                 <img src="./upload/<?=$Title->find(['sh'=>1])['img'];?>" alt="卓越科技大學校園資訊系統">
             </div>
@@ -52,7 +52,7 @@ include_once "api/db.php";
 			?>
 
             <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
-                <!--右邊-->
+            <!--右邊-->
                 <button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;"
                     onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
