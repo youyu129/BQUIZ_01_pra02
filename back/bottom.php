@@ -8,7 +8,7 @@
                 $row=$Bottom->find(1);
                 ?>
                 <td>
-                    <input type="text" name="text" id="text" value="<?=$row['text'];?>">
+                    <input type="text" name="bottom" value="<?=$row['bottom'];?>">
                     <input type="hidden" name="id" value="<?=$row['id'];?>">
                     <input type="hidden" name="table" value="<?=$do;?>">
                 </td>

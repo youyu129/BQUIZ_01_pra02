@@ -19,7 +19,7 @@
                     <input type="text" name="text[]" id="text" value="<?=$row['text'];?>">
                 </td>
                 <td>
-                    <input type="radio" name="sh" id="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':"";?>>
+                    <input type="radio" name="sh[]" id="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':"";?>>
                 </td>
                 <td>
                     <input type="checkbox" name="del[]" id="del" value="<?=$row['id'];?>">

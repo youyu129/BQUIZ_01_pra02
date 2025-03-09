@@ -127,4 +127,5 @@ $Image=new DB('images');
 $News=new DB('news');
 $Admin=new DB('admins');
 $Menu=new DB('menus');
-$Bottom=new DB('bottoms');
+$Bottom=new DB('bottom');
+$Total=new DB('total');
