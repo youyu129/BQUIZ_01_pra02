@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2025-03-09 18:30:42
+-- 產生時間： 2025-03-09 18:58:11
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -24,29 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `bottoms`
+-- 資料表結構 `total`
 --
 
-CREATE TABLE `bottoms` (
+CREATE TABLE `total` (
   `id` int(10) UNSIGNED NOT NULL,
-  `text` text NOT NULL
+  `total` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 傾印資料表的資料 `bottoms`
+-- 傾印資料表的資料 `total`
 --
 
-INSERT INTO `bottoms` (`id`, `text`) VALUES
-(1, '2025頁尾版權');
+INSERT INTO `total` (`id`, `total`) VALUES
+(1, 9);
 
 --
 -- 已傾印資料表的索引
 --
 
 --
--- 資料表索引 `bottoms`
+-- 資料表索引 `total`
 --
-ALTER TABLE `bottoms`
+ALTER TABLE `total`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -54,9 +54,9 @@ ALTER TABLE `bottoms`
 --
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `bottoms`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `total`
 --
-ALTER TABLE `bottoms`
+ALTER TABLE `total`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 

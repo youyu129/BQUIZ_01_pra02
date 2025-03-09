@@ -5,7 +5,7 @@
     <tr>
         <td class="yel">進站總人數：</td>
         <td>
-            <input type="text" name="total" id="total" value="<?=$Total->find(1)['total'];?>">
+            <input type="number" name="total" id="total" value="<?=$Total->find(1)['total'];?>">
         </td>
     </tr>
     
