@@ -56,18 +56,20 @@ include_once "api/db.php";
                     onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
-                    <div class="cent"><a href=""><img src="./icon/up.jpg" alt=""></a></div>
+                    <div class="cent" id="up"><a href=""><img src="./icon/up.jpg" alt=""></a></div>
                     <div class="cent">
                     <?php
                     $rows=$Image->all(['sh'=>1]);
                     foreach($rows as $idx =>$row):
                     ?>
-                    <img src="./upload/<?=$row['img'];?>" alt="" style="width:150px;height:103px;">
+                    <div>
+                        <img src="./upload/<?=$row['img'];?>" alt="" style="width:150px;height:103px;border:3px solid orange">
+                    </div>
                     <?php
                     endforeach;
                     ?>
                     </div>
-                    <div class="cent"><a href=""><img src="./icon/dn.jpg" alt=""></a></div>
+                    <div class="cent" id="dn"><a href=""><img src="./icon/dn.jpg" alt=""></a></div>
 
                 </div>
             </div>
