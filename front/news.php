@@ -20,8 +20,20 @@
         }
         ?>
         </div>
-                    <a class="bl" style="font-size:30px;" href="?do=news&p=<?=($now-1);?>">&lt;&nbsp;</a>
-                    <a class="bl" style="font-size:30px;" href="?do=news&p=<?=($now+1);?>">&nbsp;&gt;</a>
+        <?php
+            if(($now-1)>0){
+                echo "<a class='bl' style='font-size:30px;' href='?do=news&p=".($now-1)."'>&lt;&nbsp;</a>";
+            }
+            for ($i=1; $i <= $pages ; $i++) { 
+                $size=($i==$now)?'24px':'16px';
+                echo "<a href='?do=news&p=".$i."' style='font-size:$size;text-decoration: none;'> $i </a>";
+            }
+            if(($now+1)<=$pages){
+                echo "<a class='bl' style='font-size:30px;' href='?do=news&p=".($now+1)."'>&nbsp;&gt;</a>";
+            }
+            ?>
+                    
+                    
                 </div>
             </div>
             <div id="alt"
