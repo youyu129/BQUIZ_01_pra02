@@ -8,6 +8,8 @@
                 <span class="t botli">更多最新消息顯示區
         </span>
         <div style="width:80%;margin:auto;text-align:left">
+        <ul style='list-style-type:decimal;'>
+
         <?php
         $div=5;
         $all=$News->count(['sh'=>1]);
@@ -16,9 +18,13 @@
         $start=($now-1)*$div;
         $rows=$News->all(['sh'=>1], " LIMIT $start,$div");
         foreach($rows as $idx => $row){
-            echo "<p>".($start+$idx+1).".".mb_substr($row['text'],0,20)."...</p><br>";
+            echo "<div class='sswww'>";
+            echo ($start+$idx+1).". ".mb_substr($row['text'],0,20)."...";
+            echo "<p class='all'>".$row['text'];
+            echo "</p></div>";
         }
         ?>
+        </ul>
         </div>
         <?php
             if(($now-1)>0){
