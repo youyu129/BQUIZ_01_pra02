@@ -5,8 +5,23 @@
                 <div style="height:32px; display:block;"></div>
                 <!--正中央-->
                 <div style="text-align:center;">
-                    <a class="bl" style="font-size:30px;" href="?do=meg&p=0">&lt;&nbsp;</a>
-                    <a class="bl" style="font-size:30px;" href="?do=meg&p=0">&nbsp;&gt;</a>
+                <span class="t botli">更多最新消息顯示區
+        </span>
+        <div style="width:80%;margin:auto;text-align:left">
+        <?php
+        $div=5;
+        $all=$News->count(['sh'=>1]);
+        $pages=ceil($all/$div);
+        $now=$_GET['p']??1;
+        $start=($now-1)*$div;
+        $rows=$News->all(['sh'=>1], " LIMIT $start,$div");
+        foreach($rows as $idx => $row){
+            echo "<p>".($start+$idx+1).".".mb_substr($row['text'],0,20)."...</p><br>";
+        }
+        ?>
+        </div>
+                    <a class="bl" style="font-size:30px;" href="?do=news&p=<?=($now-1);?>">&lt;&nbsp;</a>
+                    <a class="bl" style="font-size:30px;" href="?do=news&p=<?=($now+1);?>">&nbsp;&gt;</a>
                 </div>
             </div>
             <div id="alt"
