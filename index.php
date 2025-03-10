@@ -56,20 +56,20 @@ include_once "api/db.php";
                     onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
-                    <div class="cent" id="up"><a href=""><img src="./icon/up.jpg" alt=""></a></div>
+                    <div class="cent" onclick="pp(1)"><img src="./icon/up.jpg" alt=""></div>
                     <div class="cent">
                     <?php
                     $rows=$Image->all(['sh'=>1]);
                     foreach($rows as $idx =>$row):
                     ?>
-                    <div>
+                    <div class="im" id="ssaa<?=$idx;?>">
                         <img src="./upload/<?=$row['img'];?>" alt="" style="width:150px;height:103px;border:3px solid orange">
                     </div>
                     <?php
                     endforeach;
                     ?>
                     </div>
-                    <div class="cent" id="dn"><a href=""><img src="./icon/dn.jpg" alt=""></a></div>
+                    <div class="cent" id="dn" onclick="pp(2)"><img src="./icon/dn.jpg" alt=""></div>
 
                 </div>
             </div>
@@ -86,7 +86,7 @@ include_once "api/db.php";
 </html>
 <script>
                     var nowpage = 0,
-                        num = 0;
+                        num = <?=$Image->count(['sh'=>1]);?>;
 
                     function pp(x) {
                         var s, t;
