@@ -56,7 +56,31 @@ include_once "api/db.php";
                     onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
-                    <script>
+                    <div class="cent">
+                    <?php
+                    $rows=$Image->all(['sh'=>1]);
+                    foreach($rows as $idx =>$row):
+                    ?>
+                    <img src="./upload/<?=$row['img'];?>" alt="" style="width:150px;height:103px;">
+                    <?php
+                    endforeach;
+                    ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div
+            style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
+            <span class="t" style="line-height:123px;"><?=$Bottom->find(1)['bottom'];?></span>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
                     var nowpage = 0,
                         num = 0;
 
@@ -76,16 +100,3 @@ include_once "api/db.php";
                     }
                     pp(1)
                     </script>
-                </div>
-            </div>
-        </div>
-        <div style="clear:both;"></div>
-        <div
-            style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
-            <span class="t" style="line-height:123px;"><?=$Bottom->find(1)['bottom'];?></span>
-        </div>
-    </div>
-
-</body>
-
-</html>
