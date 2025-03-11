@@ -132,7 +132,7 @@ $Total=new DB('total');
 
 $total=$Total->find(1);
 if(!isset($_SESSION['view'])){
+    $_SESSION['view']=1;
     $total['total']++;
     $Total->save($total);
 }
-$_SESSION['view']=1;
