@@ -131,7 +131,8 @@ $Bottom=new DB('bottom');
 $Total=new DB('total');
 
 $total=$Total->find(1);
-if(!isset($_SESSION['login'])){
+if(!isset($_SESSION['view'])){
     $total['total']++;
     $Total->save($total);
 }
+$_SESSION['view']=1;
