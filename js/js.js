@@ -1,4 +1,5 @@
 // JavaScript Document
+$(".mw").hide();
 $(document).ready(function (e) {
 	$(".mainmu").mouseover(
 		function () {

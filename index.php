@@ -37,18 +37,22 @@ include_once "api/db.php";
                     <span class="t botli">主選單區</span>
                     <?php
                     $mains=$Menu->all(['sh'=>1,"main_id"=>0]);
-                    foreach($mains as $main):
-                        // $options=$Menu->all(['sh'=>1,"main_id"=>$main['id']]);
-                        // foreach($options as $option):
-                    ?>
-                    <a style="color:#000; font-size:13px; text-decoration:none;" href="<?=$row['href'];?>">
-                        <div class="mainmu">
-                        <?=$main['text'];?>
-                             </div>
-                    </a>
-                    <?php
-                    endforeach;
-                    // endforeach;
+                    
+                    foreach($mains as $main){
+                        echo "<div class='mainmu'>";
+                        echo "<a style='color:#000; font-size:13px; text-decoration:none;' href='{$main['href']}' class='cent'>";
+                        echo $main['text'];
+                        echo "</a>";
+                        echo "<div class='mw mainmu2'>";
+                        $options=$Menu->all(['main_id'=>$main['id']]);
+                        foreach($options as $option){
+                            echo "<a href='{$option['href']}'>";
+                            echo $option['text'];
+                            echo "</a>";
+                        }
+                        echo "</div>";
+                        echo "</div>";
+                    }
                     ?>
                 </div>
                 <div class="dbor" style="margin:3px; width:95%; height:20%; line-height:100px;">
