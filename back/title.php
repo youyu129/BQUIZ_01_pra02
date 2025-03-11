@@ -25,10 +25,10 @@
                     <input type="checkbox" name="del[]" id="del" value="<?=$row['id'];?>">
                 </td>
                 <td>
-                    <input type="hidden" name="table" value="<?=$_GET['do'];?>">
+                    <input type="hidden" name="table" value="title">
                     <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     <input type="button"
-                        onclick="op('#cover','#cvr','./modal/update_<?=$do;?>.php?table=<?=$do;?>&id=<?=$row['id'];?>')"
+                        onclick="op('#cover','#cvr','./modal/update_title.php?table=title&id=<?=$row['id'];?>')"
                         value="更新圖片">
                 </td>
             </tr>
