@@ -129,3 +129,9 @@ $Admin=new DB('admins');
 $Menu=new DB('menus');
 $Bottom=new DB('bottom');
 $Total=new DB('total');
+
+$total=$Total->find(1);
+if(!isset($_SESSION['login'])){
+    $total['total']++;
+    $Total->save($total);
+}
